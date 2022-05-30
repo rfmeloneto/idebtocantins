@@ -4,6 +4,7 @@ from filelock import annotations
 import plotly.express as px
 import pandas as pd
 import dash_bootstrap_components as dbc
+import os
 
 df_linha_ai = pd.read_csv('df_linha_ai.csv')
 df_linha_af=pd.read_csv('linha_af.csv')
@@ -17,6 +18,7 @@ df_escolas_af= pd.read_csv('escolas_af.csv')
 
 
 app = Dash(__name__,external_stylesheets=[dbc.themes.BOOTSTRAP])
+server = app.server
 app.title = 'Ideb Tocantins'
 
 
